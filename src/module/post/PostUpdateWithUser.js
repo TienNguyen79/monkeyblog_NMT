@@ -105,7 +105,7 @@ const PostUpdateWithUser = () => {
       setCategories(results);
     }
     getData();
-  });
+  }, []);
   // console.log(categories.name);
 
   //khi ấn sửa sang trang update nó sẽ bắn tên lên dropdown đồng thời setcontent để lấy nội dung content
@@ -171,7 +171,7 @@ const PostUpdateWithUser = () => {
         content: content,
         createdAt: serverTimestamp(),
       });
-      navigate("/dashboard");
+      navigate("/my-post");
       toast.success("Create new Posts successfully!!");
       //reset
       reset({

@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/auth-context";
 import React, { Suspense } from "react";
+import { db, auth } from "./firebase-app/firebase-config";
 
 //Suspense đi với lazy load: mở trang nào mới load trang đó chứ không load đồng bộ hết
 
@@ -41,7 +42,9 @@ const DashboardLayout2 = React.lazy(() =>
 const PostUpdateWithUser = React.lazy(() =>
   import("./module/post/PostUpdateWithUser")
 );
+
 const MyPostManage = React.lazy(() => import("./module/post/MyPostManage"));
+
 function App() {
   return (
     <div>

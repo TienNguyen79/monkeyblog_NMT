@@ -107,7 +107,7 @@ const PostUpdate = () => {
       setCategories(results);
     }
     getData();
-  });
+  }, []);
   // console.log(categories.name);
 
   //khi ấn sửa sang trang update nó sẽ bắn tên lên dropdown đồng thời setcontent để lấy nội dung content

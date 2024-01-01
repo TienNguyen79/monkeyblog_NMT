@@ -200,12 +200,16 @@ const sidebarLinks = [
   },
 ];
 //${showSidebar ? "block" : "hidden"}
-const Sidebar = ({ showSidebar }) => {
+const Sidebar = ({ showSidebar, setShowSidebar }) => {
+  const handleLinkClick = () => {
+    // Đóng Sidebar khi nhấp vào các liên kết
+    setShowSidebar(false);
+  };
   return (
     <div
       className={`z-50  transition-all ${
         showSidebar ? "translate-x-[0px] " : "-translate-x-full"
-      } lg:translate-x-[0px]`}
+      } lg:translate-x-[0px] `}
     >
       <SidebarStyles>
         <div className="sidebar-logo">
@@ -231,7 +235,12 @@ const Sidebar = ({ showSidebar }) => {
               );
             }
             return (
-              <NavLink to={link.url} className="menu-item" key={link.title}>
+              <NavLink
+                to={link.url}
+                className="menu-item"
+                key={link.title}
+                onClick={() => setShowSidebar(false)}
+              >
                 <span className="menu-icon">{link.icon}</span>
                 <span className="menu-text">{link.title}</span>
               </NavLink>

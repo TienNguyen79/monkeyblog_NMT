@@ -65,7 +65,10 @@ const DashboardLayout = ({ children }) => {
 
   return (
     <DashboardStyles>
-      <DashboardHeader onToggleSidebar={toggleSidebar}></DashboardHeader>
+      <DashboardHeader
+        onToggleSidebar={toggleSidebar}
+        setShowSidebar={setShowSidebar}
+      ></DashboardHeader>
       <div className="dashboard-main">
         <Sidebar showSidebar={showSidebar}></Sidebar>
         <div className="dashboard-children">

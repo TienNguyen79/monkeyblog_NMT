@@ -147,7 +147,7 @@ const PostAddNewWithUser = () => {
 
   useEffect(() => {
     document.title = "Monkey - Add new Posts";
-  });
+  }, []);
 
   const addPostHandler = async (values) => {
     setLoading(true);

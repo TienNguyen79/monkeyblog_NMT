@@ -149,7 +149,7 @@ const UserProfile = () => {
       await batch.commit();
 
       toast.success("Update User successfully!!");
-      naviagte("/manage/user");
+      naviagte("/");
     } catch (error) {
       toast.error("Update User failed!!");
     }

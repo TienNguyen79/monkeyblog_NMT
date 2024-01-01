@@ -177,7 +177,7 @@ const PostAddNew = () => {
       setCategories(results);
     }
     getData();
-  });
+  }, []);
   //handle dropdown option đã tôi ưu hóa kiểu nhét cả 1 object category và field : categories
   const handleClickOption = async (item) => {
     // setValue("categoryId", item.id);
@@ -193,7 +193,7 @@ const PostAddNew = () => {
 
   useEffect(() => {
     document.title = "Monkey - Add new Posts";
-  });
+  }, []);
 
   return (
     <PostAddNewStyles>
